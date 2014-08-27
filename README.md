@@ -1,7 +1,7 @@
 ErrorPacketAttack
 =================
 
-Error packets demo,can be used to test,study and analysis.
+Error packets demo,can be used to test,study and analysis.    
 Used scapy module.
 
 
@@ -124,66 +124,66 @@ len        : ShortField           = None            (None)
 
 Knowledge
 -------------------
-Just support IPv4
+Just support IPv4    
 
-+ totallen is 16 bit total length 
-+ headerlen is 4 bit header length
-+ sizeof is all bit IP header length
++ totallen is 16 bit total length     
++ headerlen is 4 bit header length    
++ sizeof is all bit IP header length    
 
-### [targe3 attack]
-    ip1: totallen < sizeof
-    ip2: totallen < headerlen
-    ip3: headerlen  < sizeof
-    ip4: headerlen < 5
-    ip5: version != 5
-    ip6: if TCP: totallen < headerlen + TCP(dataofs)
-    ip7: if TCP: TCP(dataofs) < sizeof(TCP)
-    ip8: if UDP: totallen < headerlen + UDP(len)
-    ip9: if ICMP: totallen < headerlen + ICMP(8 byte)
+### targe3 attack
+- [x] ip1: totallen < sizeof    
+- [x] ip2: totallen < headerlen    
+- [x] ip3: headerlen  < sizeof    
+- [x] ip4: headerlen < 5    
+- [x] ip5: version != 5    
+- [x] ip6: if TCP: totallen < headerlen + TCP(dataofs)    
+- [x] ip7: if TCP: TCP(dataofs) < sizeof(TCP)    
+- [x] ip8: if UDP: totallen < headerlen + UDP(len)    
+- [x] ip9: if ICMP: totallen < headerlen + ICMP(8 byte)    
 
-### [land attack]
-    ip10: srcip = desip
+### land attack
+- [x] ip10: srcip = desip    
 
-### [ping of death attack]
-    ip11: totallen > 65535
+### ping of death attack
+- [x] ip11: totallen > 65535    
 
-### [IP Option attack]
-    opt1: ip option has IPOPT_LSRR(3):"loose_source_route"
-    opt2: ip option has IPOPT_SSRR(9):"strict_source_route"
-    opt3: ip option has IPOPT_RR(7)
+### IP Option attack
+- [x] opt1: ip option has IPOPT_LSRR(3):"loose_source_route"    
+- [x] opt2: ip option has IPOPT_SSRR(9):"strict_source_route"    
+- [x] opt3: ip option has IPOPT_RR(7)    
 
-### [genport attack]
-    tcp1: sport is 0
-    tcp2: dport is 0
+### genport attack
+- [x] tcp1: sport is 0    
+- [x] tcp2: dport is 0    
 
-### [winnuke attack]
-    tcp3: dport is 139 and tcpflag with TH_URG
+### winnuke attack
+- [x] tcp3: dport is 139 and tcpflag with TH_URG    
 
-### [tcpsscan attack]
-    tcp4: tcpflag with SYN,RST,ACK,FIN,PUSH,URG
-    tcp5: SYN,PSH,ACK,URG
-    tcp6: FIN
-    tcp7: SYN,FIN
-    tcp8: tapflag is 0
-    tcp9: FIN,PSH,URG
-    tcp10: URG,FIN
-    tcp11: PUSH,FIN
-    tcp12: URG,PUSH
-    tcp13: SYN,FIN,PSH,URG
+### tcpsscan attack
+- [x] tcp4: tcpflag with SYN,RST,ACK,FIN,PUSH,URG    
+- [x] tcp5: SYN,PSH,ACK,URG    
+- [x] tcp6: FIN    
+- [x] tcp7: SYN,FIN    
+- [x] tcp8: tapflag is 0    
+- [x] tcp9: FIN,PSH,URG    
+- [x] tcp10: URG,FIN    
+- [x] tcp11: PUSH,FIN    
+- [x] tcp12: URG,PUSH    
+- [x] tcp13: SYN,FIN,PSH,URG    
 
-### [udp attack]
-    udp1: sport is 0
-    udp2: dport is 0
+### udp attack
+- [x] udp1: sport is 0    
+- [x] udp2: dport is 0    
 
-### [icmp attack]
-    icmp1: icmp echo is 8 and ipaddr is brocast
+### icmp attack
+- [x] icmp1: icmp echo is 8 and ipaddr is brocast    
 
-### ~~[dns attack]~~
-    dns1: dns request header request count less than 1
-    dns2: dns request header request count more than 16
-    dns3: dns request header response count more than 1
-    dns4: only dns request header , not dns payload
-    dns5: DNS request header after the first byte of the value of the < = 1
+### ~~dns attack~~
+- [ ] dns1: dns request header request count less than 1   
+- [ ] dns2: dns request header request count more than 16   
+- [ ] dns3: dns request header response count more than 1  
+- [ ] dns4: only dns request header , not dns payload    
+- [ ] dns5: DNS request header after the first byte of the value of the < = 1    
 
-### ~~[dhcp attack]~~
-    dhcp1: The DHCP request source MAC and the EtherNet header source MAC is not equal
+### ~~dhcp attack~~
+- [ ] dhcp1: The DHCP request source MAC and the EtherNet header source MAC is not equal    
