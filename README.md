@@ -167,7 +167,7 @@ Just support IPv4
 - [x] tcp5: SYN,PSH,ACK,URG    
 - [x] tcp6: FIN    
 - [x] tcp7: SYN,FIN    
-- [x] tcp8: tapflag is 0    
+- [x] tcp8: tcpflag is 0    
 - [x] tcp9: FIN,PSH,URG    
 - [x] tcp10: URG,FIN    
 - [x] tcp11: PUSH,FIN    
