@@ -15,7 +15,10 @@ Error Packets Test v1.0
 >>>pt = pkgTest()
 
 >>>pt.showpak("ip1")
-<Ether  dst=FF:FF:FF:FF:FF:FF src=00:00:00:00:00:00 type=0x800 |<IP  ihl=5 len=40 id=22222 flags=DF frag=0 proto=udp chksum=0x8ae src=192.168.1.10 dst=192.168.1.20 |<UDP  sport=italk dport=rockwell_csp2 chksum=0x8ae |<Raw  load='ASDF123' |>>>>
+<Ether  dst=FF:FF:FF:FF:FF:FF src=00:00:00:00:00:00 type=0x800 |    
+<IP  ihl=5 len=40 id=22222 flags=DF frag=0 proto=udp chksum=0x8ae src=192.168.1.10     
+dst=192.168.1.20 |<UDP  sport=italk dport=rockwell_csp2 chksum=0x8ae |    
+<Raw  load='ASDF123' |>>>>
 
 >>>pt.showhex("ip1")
 0000   FF FF FF FF FF FF 00 00  00 00 00 00 08 00 45 00   ..............E.
