@@ -170,4 +170,4 @@ class pkgTest():
         subprocess.call(cmd,shell=True,stdout=subprocess.PIPE)
 
 if __name__ == "__main__" :
-	interact(mydict=globals(),mybanner="TA-W Error Packets Test v1.0")
+	interact(mydict=globals(),mybanner="Error Packets Test v1.0")
