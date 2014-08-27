@@ -178,12 +178,12 @@ Just support IPv4
 ### icmp attack
 - [x] icmp1: icmp echo is 8 and ipaddr is brocast    
 
-### ~~dns attack~~
+### dns attack
 - [ ] dns1: dns request header request count less than 1   
 - [ ] dns2: dns request header request count more than 16   
 - [ ] dns3: dns request header response count more than 1  
 - [ ] dns4: only dns request header , not dns payload    
 - [ ] dns5: DNS request header after the first byte of the value of the < = 1    
 
-### ~~dhcp attack~~
+### dhcp attack
 - [ ] dhcp1: The DHCP request source MAC and the EtherNet header source MAC is not equal    
